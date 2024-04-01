@@ -5,7 +5,7 @@ import org.junit.AfterClass;
 import org.junit.Test;
 
 public class MTv1 {
-	
+
 	private NextDate trialDate = new NextDate(3,4,1976);
 
 	@AfterClass
@@ -16,19 +16,20 @@ public class MTv1 {
 	/*
 	 * Test method for 'ee.ut.cs.swt.nextdate.NextDate.run(int, int, int)'
 	 */
-	
+
 	@Test
 	public final void testJuneToJuly(){
-	assertEquals("7/1/2001", trialDate.run(6, 30, 2001));
-	}
-	
-	@Test
-	public final void testMarchToApril(){
-	assertEquals("4/1/2001", trialDate.run(3, 31, 2001));
+		assertEquals("7/1/2001", trialDate.run(6, 30, 2001));
 	}
 
 	@Test
-	public final void testDecemberToJanuary(){ assertEquals("Invalid Next Year", trialDate.run(12, 31, 2021)); }
+	public final void testMarchToApril(){
+		assertEquals("4/1/2001", trialDate.run(3, 31, 2001));
+	}
+
+	@Test
+	public final void testDecemberToJanuary(){
+		assertEquals("Invalid Next Year", trialDate.run(12, 31, 2021)); }
 
 	@Test
 	public final void testLeapYear(){
